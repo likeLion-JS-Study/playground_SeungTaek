@@ -1,14 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import "firebase/compat/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBR_U6byxl8Amy38_xyPUNlZgIMTlN1YZA",
-  authDomain: "nwitter-2110f.firebaseapp.com",
-  projectId: "nwitter-2110f",
-  storageBucket: "nwitter-2110f.appspot.com",
-  messagingSenderId: "508591476128",
-  appId: "1:508591476128:web:5db331a7d667b3dc3628c5",
-  measurementId: "G-8M00BK26GD",
+  apiKey : process.env.REACT_APP_API_KEY,
+  authDomain : process.env.REACT_APP_AUTH_DOMAIN,
+  projectId : process.env.REACT_APP_PROJECT_ID,
+  appStroage : process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId : process.env.REACT_APP_MESSAGIN_ID,
+  appId : process.env.REACT_APP_APP_ID,
+  appMeasur : process.env.REACT_APP_MEASUR_ID,
 };
 
 export default initializeApp(firebaseConfig);
